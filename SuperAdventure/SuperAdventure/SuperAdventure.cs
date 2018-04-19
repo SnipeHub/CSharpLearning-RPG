@@ -19,18 +19,7 @@ namespace SuperAdventure
         {
             InitializeComponent();
 
-            //Location location = new Location(1, "Home", "This is your house."); // This is our location object. We no longer need this line as we have created our own in the required classes.
-            //location.ID = 1;
-            //location.Name = "Home";
-            //location.Description = "This is your house.";
-
-            _player = new Player();
-
-            _player.CurrentHitPoints = 10;
-            _player.MaximumHitPoints = 10;
-            _player.Gold = 20;
-            _player.ExperiencePoints = 0;
-            _player.Level = 1;
+            _player = new Player(10, 10, 20, 0, 1); // have a look at Player.cs to see where this is coming from
 
             lblHitPoints.Text = _player.CurrentHitPoints.ToString();
             lblGold.Text = _player.Gold.ToString();
