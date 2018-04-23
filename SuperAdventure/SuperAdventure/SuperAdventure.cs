@@ -19,7 +19,7 @@ namespace SuperAdventure
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            lblGold.Text = "123";
+           lblGold.Text = "123"; // When the button is pressed, 123 appears in the linked lblGold text field
         }
     }
 }
