@@ -41,15 +41,15 @@ namespace Engine
         public const int LOCATION_ID_BRIDGE = 8;
         public const int LOCATION_ID_SPIDER_FIELD = 9;
 
-        static World()
-        {
-            PopulateItems();
+        static World()          // our constructor. This methods job is to run all the other methods. It runs each method one at a time. Once it has gone through
+        {                       // the first one, it returns back up to the method list and moves onto the next one etc. You can also call methods, within methods, within methods
+            PopulateItems();    // and so forth, it can get very deep. But that makes things complicated, better to keep things simple.
             PopulateMonsters();
             PopulateQuests();
             PopulateLocations();
         }
 
-        private static void PopulateItems()
+        private static void PopulateItems() // void means that this method in not going to return a value, its just going to do work, in this case populate the items.
         {
             Items.Add(new Weapon(ITEM_ID_RUSTY_SWORD, "Rusty sword", "Rusty swords", 0, 5));
             Items.Add(new Item(ITEM_ID_RAT_TAIL, "Rat tail", "Rat tails"));
@@ -172,9 +172,9 @@ namespace Engine
             Locations.Add(spiderField);
         }
 
-        public static Item ItemByID(int id)
-        {
-            foreach (Item item in Items)
+        public static Item ItemByID(int id) // this is public as we will need to call from it in other parts of the game. Need static as trhis is not an object
+        {                                   // Instead of void we have Item, that is because this is a method that will return a value, so if the player calls an item,
+            foreach (Item item in Items)    // they will get that item back. 
             {
                 if (item.ID == id)
                 {

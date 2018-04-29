@@ -27,5 +27,10 @@ namespace SuperAdventure
             lblLevel.Text = _player.Level.ToString();
 
         }
+
+        private void dgvInventory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
