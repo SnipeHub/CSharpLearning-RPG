@@ -11,7 +11,7 @@ using Engine; // The name of our namespace Engine, which links to it (Player.cs)
 
 namespace SuperAdventure
 {
-    public partial class SuperAdventure : Form
+    public partial class SuperAdventure : Form // this class is what connects all the window controls to the code
     {
         private Player _player; // Variable _player is a private variable. Scott likes to name his private variables with underscore "_"
 
@@ -29,6 +29,36 @@ namespace SuperAdventure
         }
 
         private void dgvInventory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnNorth_Click(object sender, EventArgs e) // to get this button code generated, all you need to do is double click on the buttons in the designer view.
+        { // we write all our code in these curly brackets to connect to our code, and it will initiate when the player presses this button.
+
+        }
+
+        private void btnWest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEast_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSouth_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUseWeapon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUsePotion_Click(object sender, EventArgs e)
         {
 
         }
